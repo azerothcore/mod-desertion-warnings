@@ -33,7 +33,7 @@ public:
             {
                 case BG_DESERTION_TYPE_LEAVE_QUEUE:
                 case BG_DESERTION_TYPE_NO_ENTER_BUTTON:
-                    ChatHandler(player->GetSession()).PSendSysMessage("%s", sConfigMgr->GetOption<std::string>("DesertionWarnings.WarningText", "").c_str());
+                    ChatHandler(player->GetSession()).PSendSysMessage("{}", sConfigMgr->GetOption<std::string>("DesertionWarnings.WarningText", "").c_str());
                     break;
                 default:
                     break;
