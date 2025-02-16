@@ -25,7 +25,7 @@ class DesertionWarnings : public PlayerScript
 public:
     DesertionWarnings() : PlayerScript("DesertionWarnings") { }
 
-    void OnBattlegroundDesertion(Player* player, const BattlegroundDesertionType type) override
+    void OnPlayerBattlegroundDesertion(Player* player, const BattlegroundDesertionType type) override
     {
         if (sConfigMgr->GetOption<bool>("DesertionWarnings.Enabled", false))
         {
