@@ -23,7 +23,9 @@
 class DesertionWarnings : public PlayerScript
 {
 public:
-    DesertionWarnings() : PlayerScript("DesertionWarnings") { }
+    DesertionWarnings() : PlayerScript("DesertionWarnings", {
+        PLAYERHOOK_ON_BATTLEGROUND_DESERTION
+    }) { }
 
     void OnPlayerBattlegroundDesertion(Player* player, const BattlegroundDesertionType type) override
     {
